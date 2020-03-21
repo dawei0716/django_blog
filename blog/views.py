@@ -4,8 +4,26 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+posts = [
+    {
+        'author': 'david kim',
+        'title': 'Blog Post 1',
+        'content': 'First post',
+        'date_posted': 'August 27, 2019'
+    }, 
+    {
+        'author': 'king dawei',
+        'title': 'Blog Post 2',
+        'content': 'Second post',
+        'date_posted': 'August 28, 2019'
+    }
+
+]
 def home(request):
-    return HttpResponse('<h1>BLOG HOME </h1>')
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/home.html', context)
 
 def about(request):
-    return HttpResponse('<h1>BLOG ABOUT </h1>')
+    return render(request, 'blog/about.html', {'title':'About'})
