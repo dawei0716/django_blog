@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 #HEROKU STUFF
-ALLOWED_HOSTS = [https://blogprojectdk.herokuapp.com]
+ALLOWED_HOSTS = ['https://blogprojectdk.herokuapp.com']
 
 
 # Application definition
@@ -115,7 +115,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+ 
 
 #heroku
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
