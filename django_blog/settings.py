@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 #HEROKU STUFF
-ALLOWED_HOSTS = ['https://blogprojectdk.herokuapp.com']
+ALLOWED_HOSTS = ['blogprojectdk.herokuapp.com']
 
 
 # Application definition
